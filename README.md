@@ -13,5 +13,7 @@ Model, MVC’de projenin iş mantığının (business layer) oluşturulduğu bö
 View, MVC’de projenin arayüzlerinin oluşturulduğu bölümdür. Bu bölümde projenin kullanıcılara sunulacak olan HTML dosyaları yer almaktadır.
 
 # Bootstrap Nedir?
+Bir CSS framework’u olan Bootstrap, açık kaynak kodlu bir tasarım aracıdır. 
+Bir site için gerekli olan bütün unsurları içerisinde barındıran Bootstrap ile tasarım yaparken bu hazır unsurları kullanarak tüm cihazlara uygun tasarımlar yapmanızı sağlar.
 
 # Attribute Nedir?
