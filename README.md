@@ -13,3 +13,5 @@ Model, MVC’de projenin iş mantığının (business layer) oluşturulduğu bö
 View, MVC’de projenin arayüzlerinin oluşturulduğu bölümdür. Bu bölümde projenin kullanıcılara sunulacak olan HTML dosyaları yer almaktadır.
 
 # Bootstrap Nedir?
+
+# Attribute Nedir?
