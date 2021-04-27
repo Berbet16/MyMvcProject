@@ -17,3 +17,4 @@ Bir CSS framework’u olan Bootstrap, açık kaynak kodlu bir tasarım aracıdı
 Bir site için gerekli olan bütün unsurları içerisinde barındıran Bootstrap ile tasarım yaparken bu hazır unsurları kullanarak tüm cihazlara uygun tasarımlar yapmanızı sağlar.
 
 # Attribute Nedir?
+Attributes, .Net Framework' de var olan veya geliştiriciler tarafından yazılan 'type' veya 'members' çalışma zamanında davranışlarının farklı şekillerde ele alınabilmelerini sağlayan ekstra metadata bilgileri ekler.
