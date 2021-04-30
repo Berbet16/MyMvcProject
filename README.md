@@ -18,3 +18,6 @@ Bir site için gerekli olan bütün unsurları içerisinde barındıran Bootstra
 
 # Attribute Nedir?
 Attributes, .Net Framework' de var olan veya geliştiriciler tarafından yazılan 'type' veya 'members' çalışma zamanında davranışlarının farklı şekillerde ele alınabilmelerini sağlayan ekstra metadata bilgileri ekler.
+
+# Dependency Injection Nedir?
+Bağımlılık Enjeksiyonu (DI), IoC'yi uygulamak için kullanılan bir tasarım modelidir. Bir sınıfın dışında bağımlı nesnelerin oluşturulmasına izin verir ve bu nesneleri farklı yollarla bir sınıfa sağlar. 
