@@ -21,14 +21,23 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBL(); //category manager sınıfından verileri aldık.
+            //var categoryvalues = cm.GetAllBL(); //category manager sınıfından verileri aldık.
 
-            return View(categoryvalues); //bize geriye aldığımız verileri döndür
+            return View(); //bize geriye aldığımız verileri döndür
         }
 
+        [HttpGet]//sayfa yüklendiğinde çalışır
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost] //Sayfaya tıklandığında çalışır
         public ActionResult AddCategory(Category cat)
         {
-            cm.CategoryAddBL(cat); //catorgy managerden yer alan metotu kullandık.
+            //cm.CategoryAddBL(cat); //catorgy managerden yer alan metotu kullandık.
 
             //ekleme işleminden sonra "  "   metota yönlendir.
             return RedirectToAction("GetCategoryList");  
