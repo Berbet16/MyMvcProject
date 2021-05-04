@@ -15,7 +15,6 @@ View, MVC’de projenin arayüzlerinin oluşturulduğu bölümdür. Bu bölümde
 # Bootstrap Nedir?
 Bir CSS framework’u olan Bootstrap, açık kaynak kodlu bir tasarım aracıdır. 
 Bir site için gerekli olan bütün unsurları içerisinde barındıran Bootstrap ile tasarım yaparken bu hazır unsurları kullanarak tüm cihazlara uygun tasarımlar yapmanızı sağlar.
-![Bootstrap](https://webcesi.com/wp-content/uploads/2017/09/bootstrap-sablonlari-1.jpg)
 
 # Attribute Nedir?
 Attributes, .Net Framework' de var olan veya geliştiriciler tarafından yazılan 'type' veya 'members' çalışma zamanında davranışlarının farklı şekillerde ele alınabilmelerini sağlayan ekstra metadata bilgileri ekler.
