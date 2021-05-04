@@ -1,5 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Category
         //Category dan verileri çekmemiz için yeni nesne oluşturduk
-        CategoryManager cm = new CategoryManager();
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
         public ActionResult Index()
         {
@@ -21,9 +24,9 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult GetCategoryList()
         {
-            //var categoryvalues = cm.GetAllBL(); //category manager sınıfından verileri aldık.
+            var categoryvalues = cm.GetList(); //category manager sınıfından verileri aldık.
 
-            return View(); //bize geriye aldığımız verileri döndür
+            return View(categoryvalues); //bize geriye aldığımız verileri döndür
         }
 
         [HttpGet]//sayfa yüklendiğinde çalışır
@@ -35,12 +38,27 @@ namespace MvcProjeKampi.Controllers
 
 
         [HttpPost] //Sayfaya tıklandığında çalışır
-        public ActionResult AddCategory(Category cat)
+        public ActionResult AddCategory(Category p)
         {
-            //cm.CategoryAddBL(cat); //catorgy managerden yer alan metotu kullandık.
-
+            //cm.CategoryAddBL(p); //catorgy managerden yer alan metotu kullandık.
             //ekleme işleminden sonra "  "   metota yönlendir.
-            return RedirectToAction("GetCategoryList");  
+            CategoryValidatior categoryValidator = new CategoryValidatior();
+            ValidationResult results = categoryValidator.Validate(p); //results değişkeni gelen değerlere göre kontrol ediyor
+            if(results.IsValid)
+            {
+                cm.CategoryAdd(p);
+                return RedirectToAction("GetCategoryList");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    //modele error ları ekliyoruz (önce ne üzerinde çalışıyorsak,hatanın kendisi)
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
 
 
         }
