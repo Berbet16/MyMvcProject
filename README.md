@@ -21,3 +21,6 @@ Attributes, .Net Framework' de var olan veya geliştiriciler tarafından yazıla
 
 # Dependency Injection Nedir?
 Bağımlılık Enjeksiyonu (DI), IoC'yi uygulamak için kullanılan bir tasarım modelidir. Bir sınıfın dışında bağımlı nesnelerin oluşturulmasına izin verir ve bu nesneleri farklı yollarla bir sınıfa sağlar. 
+
+# Fluent Validation Nedir?
+Yazılım geliştirirken sistemin daha düzgün ve kararlı çalışması için birçok yerde validation işlemleri yapıyoruz.Gerek okunması, kuralların esnekliği gerekse yönetilebilirliği yüzünden daha büyük yapılara ihtiyaç duyuyoruz. Bu amaçla hazırlanmış birçok açık kaynaklı veya üçüncü parti validation(doğrulama) kütüphaneleri mevcuttur.
