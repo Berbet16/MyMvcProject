@@ -24,3 +24,6 @@ Bağımlılık Enjeksiyonu (DI), IoC'yi uygulamak için kullanılan bir tasarım
 
 # Fluent Validation Nedir?
 Yazılım geliştirirken sistemin daha düzgün ve kararlı çalışması için birçok yerde validation işlemleri yapıyoruz.Gerek okunması, kuralların esnekliği gerekse yönetilebilirliği yüzünden daha büyük yapılara ihtiyaç duyuyoruz. Bu amaçla hazırlanmış birçok açık kaynaklı veya üçüncü parti validation(doğrulama) kütüphaneleri mevcuttur.
+
+
+# İstatistik Sayfasının Ekran Görüntüsü
