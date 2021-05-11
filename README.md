@@ -27,3 +27,4 @@ Yazılım geliştirirken sistemin daha düzgün ve kararlı çalışması için 
 
 
 # İstatistik Sayfasının Ekran Görüntüsü
+![](istatistik.png)
