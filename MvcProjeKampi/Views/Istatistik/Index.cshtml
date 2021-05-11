@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div class="card-deck">
+    <div class="card text-white bg-secondary mb-4" style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-footer">
+            <h5 class="login-card-body">TOPLAM KATEGORİ SAYISI</h5>
+            <h5 class="card-text"> @ViewBag.CategoryCount</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-gradient-danger mb-4 " style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-footer">
+            <h5 class="login-card-body">"YAZILIM" BAŞLIK SAYISI</h5>
+            <h5 class="card-text"> @ViewBag.Heading</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-warning mb-4 " style="max-width: 20rem; ">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-footer">
+            <h5 class="login-card-body">YAZARLARDA "A" HARFİ GEÇENLER</h5>
+            <h5 class="card-text"> @ViewBag.Writer</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-gradient-success mb-4 " style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-footer">
+            <h5 class="login-card-body">EN FAZLA BAŞLIK KATEGORİSİ</h5>
+            <h5 class="card-text"> @ViewBag.HeadingMax</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-4" style="max-width: 20rem; height:auto">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-footer">
+            <h5 class="login-card-body">KATEGORİLER'DE T/F FARKI </h5>
+            <h5 class="card-text"> @ViewBag.StatusFark</h5>
+        </div>
+    </div>
+</div>

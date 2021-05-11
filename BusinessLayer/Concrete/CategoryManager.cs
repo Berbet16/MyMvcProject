@@ -44,11 +44,6 @@ namespace BusinessLayer.Concrete
         {
             return _categorydal.List();
         }
-        
-
-
-
-
 
         //public void CategoryAddBl(Category p)
         //{
