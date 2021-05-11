@@ -13,6 +13,9 @@ namespace DataAccessLayer.Abstract
 
         void Insert(T p);
 
+        //sildireceğimiz işlemi buldurmak
+        T Get(Expression<Func<T, bool>> filter);
+
         void Delete(T p);
 
         void Update(T p);
