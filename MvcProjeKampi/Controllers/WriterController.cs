@@ -15,6 +15,8 @@ namespace MvcProjeKampi.Controllers
     {
         //üzerinde çalışacağımız business sınıfını çağıracağız
         WriterManager wm = new WriterManager(new EfWriterDal());
+        WriterValidatior writervalidatior = new WriterValidatior();
+
 
         // GET: Writer
         public ActionResult Index()
@@ -32,11 +34,35 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddWriter(Writer p)
         {
-            WriterValidatior writervalidatior = new WriterValidatior();
             ValidationResult results = writervalidatior.Validate(p);
             if (results.IsValid)
             {
                 wm.WriterAdd(p);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult EditWriter(int id)
+        {
+            var writervalue = wm.GetByID(id);
+            return View(writervalue);
+        }
+
+        public ActionResult EditWriter(Writer p)
+        {
+            ValidationResult results = writervalidatior.Validate(p);
+            if (results.IsValid)
+            {
+                wm.WriterUpdate(p);
                 return RedirectToAction("Index");
             }
             else
