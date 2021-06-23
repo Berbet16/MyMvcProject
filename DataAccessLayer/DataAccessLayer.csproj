@@ -40,9 +40,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +99,26 @@
     <Compile Include="Migrations\202105251734348_mig_imagesizechange.designer.cs">
       <DependentUpon>202105251734348_mig_imagesizechange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105251806589_mig_writer_add_status.cs" />
+    <Compile Include="Migrations\202105251806589_mig_writer_add_status.designer.cs">
+      <DependentUpon>202105251806589_mig_writer_add_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105281357472_mig_contentstatusadd.cs" />
+    <Compile Include="Migrations\202105281357472_mig_contentstatusadd.designer.cs">
+      <DependentUpon>202105281357472_mig_contentstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105281411033_mig_headingstatusadd.cs" />
+    <Compile Include="Migrations\202105281411033_mig_headingstatusadd.designer.cs">
+      <DependentUpon>202105281411033_mig_headingstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105281922526_mig_datetimeadd.cs" />
+    <Compile Include="Migrations\202105281922526_mig_datetimeadd.designer.cs">
+      <DependentUpon>202105281922526_mig_datetimeadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106231048491_object_error.cs" />
+    <Compile Include="Migrations\202106231048491_object_error.designer.cs">
+      <DependentUpon>202106231048491_object_error.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,6 +144,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105251734348_mig_imagesizechange.resx">
       <DependentUpon>202105251734348_mig_imagesizechange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105251806589_mig_writer_add_status.resx">
+      <DependentUpon>202105251806589_mig_writer_add_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281357472_mig_contentstatusadd.resx">
+      <DependentUpon>202105281357472_mig_contentstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281411033_mig_headingstatusadd.resx">
+      <DependentUpon>202105281411033_mig_headingstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281922526_mig_datetimeadd.resx">
+      <DependentUpon>202105281922526_mig_datetimeadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106231048491_object_error.resx">
+      <DependentUpon>202106231048491_object_error.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

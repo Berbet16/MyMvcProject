@@ -19,7 +19,8 @@ namespace MvcProjeKampi.Controllers
         public ActionResult Index()
         {
             var headingvalues = hm.GetList();
-            return View(headingvalues);
+
+            return View(headingvalues.ToList());
         }
 
         [HttpGet]
@@ -53,5 +54,11 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult ContentByHeading()
+        {
+            return View();
+        }
+        
     }
 }
