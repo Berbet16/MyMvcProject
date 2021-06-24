@@ -119,6 +119,10 @@
     <Compile Include="Migrations\202106231048491_object_error.designer.cs">
       <DependentUpon>202106231048491_object_error.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106241507312_mid_add_message.cs" />
+    <Compile Include="Migrations\202106241507312_mid_add_message.designer.cs">
+      <DependentUpon>202106241507312_mid_add_message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106231048491_object_error.resx">
       <DependentUpon>202106231048491_object_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106241507312_mid_add_message.resx">
+      <DependentUpon>202106241507312_mid_add_message.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
