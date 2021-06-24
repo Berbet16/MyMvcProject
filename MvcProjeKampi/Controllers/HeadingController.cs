@@ -1,11 +1,11 @@
-﻿using BusinessLayer.Concrete;
-using DataAccessLayer.EntityFramework;
-using EntityLayer.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -18,35 +18,28 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult Index()
         {
-            var headingvalues = hm.GetList();
-
-            return View(headingvalues.ToList());
+            var headingValues = hm.GetList();
+            return View(headingValues);
         }
-
         [HttpGet]
         public ActionResult AddHeading()
         {
-            //Catgeory sınıfındaki değerleri name ve id olarak tutacak
-            //listeden seçilecek bir değer , category tablosuna gitmemiz için nesne türettik üst tarafta
-            List<SelectListItem> valuecategory = (from x in cm.GetList() select new SelectListItem
-            {
-                //biz verileri  dropdown olaak tutuyoruz, valuenumber= seçmiş olduğumuz değerin id si
-                //displaynumber = id nin görüntüsü
-                Text = x.CategoryName,
-                Value = x.CategoryID.ToString() //catgeoryıd sini string'e çevirmemiz gerekiyor
-            }).ToList();
-
-            List<SelectListItem> valuewriter = (from x in wm.GetList() select new SelectListItem
-            {
-                Text =x.WriterName + " " + x.WriterSurname,
-                Value = x.WriterID.ToString()
-            }).ToList();
-
-            ViewBag.vlc = valuecategory; //view e taşıyoruz.
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
+            List<SelectListItem> valuewriter = (from x in wm.GetList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.WriterName + " " + x.WriterSurname,
+                                                    Value = x.WriterID.ToString()
+                                                }).ToList();
             ViewBag.vlw = valuewriter;
             return View();
         }
-
         [HttpPost]
         public ActionResult AddHeading(Heading p)
         {
@@ -54,11 +47,34 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
-
-        public ActionResult ContentByHeading()
+        [HttpGet]
+        public ActionResult EditHeading(int id)
         {
-            return View();
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
+            var HeadingValue = hm.GetById(id);
+            return View(HeadingValue);
         }
-        
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetById(id);
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
