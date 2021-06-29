@@ -8,23 +8,28 @@
 <br/>
 <h2>Hakkımızdaki Veri Listesi</h2>
 <br/>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Hakkımda Başlığı</th>
-        <th>Aktif Yap</th>
-        <th>Pasif Yap</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.AboutID</td>
-            <td>Başlık</td>
-            <td><a href="#" class="btn btn-warning">Aktif Yap</a></td>
-            <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
-        </tr>
-    }
 
-</table>
+<div>
+    <table class="table table-bordered">
+
+        <tr>
+            <th>ID</th>
+            <th>Hakkımda Başlığı</th>
+            <th>Aktif Yap</th>
+            <th>Pasif Yap</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.AboutID</td>
+                <td>Başlık</td>
+                <td><a href="#" class="btn btn-warning">Aktif Yap</a></td>
+                <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
 
 @Html.Action("AboutPartial", "About")
