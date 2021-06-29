@@ -14,18 +14,11 @@
     <!-- Content Wrapper. Contains page content -->
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Mesaj Sayfası</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("MessageListMenu", "Contact") 
+            @*@Html.Action("MessageListMenu", "Contact")*@ 
             <div class="col-md-3">
                 <a href="compose.html" class="btn btn-primary btn-block mb-3">Kişisel Gelen Mesajlar</a>
                 <div class="card">
@@ -52,7 +45,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/Message/SendBox/" class="nav-link">
                                     <i class="far fa-envelope"></i> Gönderilen Mesajlar
                                 </a>
                             </li>
@@ -164,13 +157,13 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Contact/GetContactDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@item.MessageId">@item.SenderMail</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetInBoxMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetInBoxMessageDetails/@item.MessageId">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> @item.MessageContent
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 mins ago</td>
+                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyy"))</td>
                                         </tr>
                                     }
                                 </tbody>
