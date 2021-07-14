@@ -47,8 +47,10 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
+            string writermailinfo = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == writermailinfo).Select(y => y.WriterID).FirstOrDefault();
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 0;
+            p.WriterID = writeridinfo;
             p.HeadingStatus = true;
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
