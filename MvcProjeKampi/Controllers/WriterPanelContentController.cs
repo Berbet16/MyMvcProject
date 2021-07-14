@@ -19,7 +19,7 @@ namespace MvcProjeKampi.Controllers
         {
             Context c = new Context();
             p = (string)Session["WriterMail"];
-            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault(); 
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault(); 
             var contentvalues = cm.GetListByWriter(writeridinfo);
             return View(contentvalues);
         }
