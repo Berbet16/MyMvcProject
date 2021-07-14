@@ -2863,13 +2863,13 @@
     <Content Include="Views\WriterPanel\NewHeading.cshtml" />
     <Content Include="Views\WriterPanel\EditHeading.cshtml" />
     <Content Include="Views\WriterPanelMessage\Inbox.cshtml" />
-    <Content Include="Views\WriterPanelMessage\MessageListMenu.cshtml" />
     <Content Include="Views\WriterPanelMessage\Sendbox.cshtml" />
     <Content Include="Views\WriterPanelMessage\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\WriterPanelMessage\GetSendBoxMessageDetails.cshtml" />
     <Content Include="Views\WriterPanelMessage\NewMessage.cshtml" />
     <Content Include="Views\WriterPanelContent\MyContent.cshtml" />
     <Content Include="Views\Login\WriterLogin.cshtml" />
+    <Content Include="Views\WriterPanelMessage\MessageListMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

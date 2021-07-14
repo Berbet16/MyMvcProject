@@ -1,4 +1,12 @@
-﻿<div class="col-md-3">
+﻿@model EntityLayer.Concrete.Message
+
+@{
+    ViewBag.Title = "MessageListMenu";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<br/><br/>
+<div class="col-md-3">
     <a href="/WriterPanelMessage/NewMessage/" class="btn btn-primary btn-block mb-3">Yeni Mesaj Oluştur</a>
     <div class="card">
         <div class="card-header">
@@ -78,4 +86,5 @@
     <!-- /.card -->
 </div>
 
-<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+<script src="/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
