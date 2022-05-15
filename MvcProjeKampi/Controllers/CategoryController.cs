@@ -35,8 +35,6 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
 
-
-
         [HttpPost] //Sayfaya tıklandığında çalışır
         public ActionResult AddCategory(Category p)
         {
