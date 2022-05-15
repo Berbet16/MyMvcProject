@@ -75,7 +75,5 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingDelete(HeadingValue);
             return RedirectToAction("Index");
         }
-
-
     }
 }
